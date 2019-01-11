@@ -1,0 +1,91 @@
+
+    <style>
+        select {
+        height: 36px;
+        width: 195px;
+        }
+        .container {
+        border: 1px solid;
+        padding: 10px 10px 10px;
+        width: 500px
+        }
+        </style>
+        <div class="container my-4">
+          <div class="form-group row">
+
+              <!-- <label for="inputEmail" class="col-sm-4 col-form-label">Baller</label>
+          
+              <div class="row-sm-5">
+           <select>
+           <option>Select Baller</option>
+           <option></option>
+           <option></option>
+           <option></option>
+
+           </select>
+           </div> -->
+
+           <label for="inputEmail" class="col-sm-4 col-form-label">Score</label>
+          
+           <div class="row-sm-5">
+        <select class="hideLabel form-control" (change)="onSelectOfPossibility()" #possibleRuns>
+        <option selected=""> Run/Wicket</option>
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>6</option>
+        <option>Wicket</option>
+        </select>
+        </div>
+       
+        <div  *ngIf="showWicket">
+        <label class="col-sm-4 col-form-label" for=""> Wicket</label>
+        
+        <select class="hideLabel col-sm-6 from-control ml-4" #Wicket [disabled]="btnDisable" (change)="onSelectOfWicket()">
+        <option selected="">Selected Wicket</option>
+        <option>RunOut</option>
+        <option>Stumping</option>
+        <option>LBW</option>
+        <option>Hit the ball twice</option>
+        <option>Bowled</option>
+        <option>Hit wicket</option>
+        <option>Handling the ball</option>
+        <option>Retired</option>
+        <option>Timed out</option>
+        <option>Catch</option>
+        </select>
+        <div  *ngIf="showCatchBy">
+        <label class="col-sm-4 col-form-label" for="">Catch</label>
+        
+        <select class="hideLabel col-sm-6 from-control ml-4" #Catch [disabled]="btnDisable" (change)="onSelectOfCatch()">
+        <option selected="">Select Baller</option>
+        <option *ngFor="let cc of teamlist1">{{cc}}</option>
+        <option *ngFor="let aa of teamlist2">{{aa}}</option>>
+        </select>
+      </div>
+        </div>
+       
+      </div>
+       <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-4 col-form-label" >Balls</label>
+          <input type="text" placeholder="" name="ball" [(ngModel)]="ball" >
+      </div>
+      <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-4 col-form-label">Over</label>
+          <input type="text" placeholder="" name="over" [(ngModel)]="over">
+      </div>
+      <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-4 col-form-label">Commentary</label>
+          <input type="text" placeholder="Commentary" name="discription" [(ngModel)]="discription">
+          </div>
+           
+          <div class="col">
+          <router-outlet></router-outlet>
+          </div>  
+         <button class="btn btn-primary mr-3" type="button" (click)="onAddScoreClicked()" >AddScore</button>
+        </div>  
+    
+       
+        

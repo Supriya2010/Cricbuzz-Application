@@ -1,0 +1,171 @@
+<div class="container ">
+    <div class="table">
+    <tr><th><table class="table ">
+    <thead class="thead-light">
+    <tr>
+      <th scope="col" *ngFor="let aa of tem">{{aa.team1}}</th>
+    </tr>
+    </thead>
+    
+    <tbody >
+    <tr>
+    <th> <input type="text" #player1></th>
+    <th><input type="button" value="submit" (click)="onAddButtonClick()" >
+    <button type="button" value="delete" (click)="onDeleteButtonClick()" >Delete</button></th>
+    <!-- <th><button type="button" class="btn btn" >Submit</button></th> -->
+    </tr> 
+    </tbody>
+    <thead>
+    <tr>
+    <!-- <th scope="col">Profile</th> -->
+    <th scope="col">Team1 Player</th>
+    </tr>
+    <tr *ngFor="let cc of playerlist">
+   
+    <th>{{cc}}</th>
+    </tr>
+    </thead>
+    </table> 
+    
+    <button type="button" (click)="onAddTeamsButtonClick()">Add-Team1</button></th>
+    
+    
+    
+    
+    <th><table class="table ml-4 ">
+    <thead class="thead-light">
+    <tr>
+      <th scope="col" *ngFor="let aa of tem">{{aa.team2}}</th>
+    </tr>
+    </thead>
+    
+    <tbody >
+    <tr>
+    <th> <input type="text" #player2 ></th>
+    <th><input type="button" value="submit" (click)="onAddButtonClick1()" >
+      <button type="button" value="delete" (click)="onDeleteButtonClick1()" >Delete</button></th>
+    </tr> 
+    </tbody>
+    <thead>
+    <tr>
+    <!-- <th scope="col">Profile</th> -->
+    <th scope="col">Team2 Player</th>
+    </tr>
+    <tr *ngFor="let cc of playerlist1">
+     
+      <th>{{cc}}</th>
+      </tr>
+      </thead>
+      </table> 
+      <button type="button" (click)="onAddTeam2ButtonClick()">Add-Team2</button></th>
+     
+    </div>
+    </div>
+  <button type="button" class="btn btn-outline-success ml-2" (click)="onSubmitButtonClick()" >Submit</button>
+
+  
+<!-- 
+<table class="table col-sm-4 my-4">
+        <thead class="thead-dark">
+          <tr>
+             <th scope="col" *ngFor="let cc of tem">{{cc.team1}}</th>    
+          </tr>
+          
+        </thead>
+      </table>  
+
+
+      <table class="table col-sm-4">
+    <thead class="thead-light">
+      <tr>   
+        <th scope="col">Player Name</th> 
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input type="text" id="playerName" placeholder="player name" #player1>
+        </td>
+        
+       <td>
+         <button type="button" class="btn btn-primary" (click)="onAddButtonClick()">Add</button>
+      </td>   
+      </tr> 
+      <button class="btn btn-primary" (click)="onAddTeamsButtonClick()">Add-Team1</button>  
+    </tbody>
+  </table>
+  <table class="table col-sm-4">
+        <thead class="thead-light">
+          <tr>   
+            <th scope="col">Player Name</th> 
+           
+          </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let item of playerlist">
+                
+                <td>{{item}}</td>
+                
+                <td> <button type="button" class="btn btn-danger" (click)="onDeleteButtonClick()">Delete</button></td>
+                </tr>
+                </tbody>
+              </table>
+    
+    <div class="floatRight">
+  <table class="table col-sm-4 my-4">
+        <thead class="thead-dark">
+          <tr>
+             <th scope="col" *ngFor="let cc of tem">{{cc.team2}}</th>    
+          </tr>
+        </thead>
+      </table>  
+<table class="table col-sm-4">
+    <thead class="thead-light">
+      <tr>   
+        <th scope="col">Players Name</th> 
+     
+      </tr>
+    </thead> <button class="btn btn-primary" (click)="onAddTeam2ButtonClick()">Add-Team2</button>  
+    <tbody>
+      <tr>
+        <td>
+          <input type="text" id="playerName" placeholder="player name"#player2>
+        </td>
+        
+       <td>
+         <button type="button" class="btn btn-primary" (click)="onAddButtonClick1()">Add</button>
+      </td>   
+      </tr> 
+      <button class="btn btn-primary" (click)="onAddTeam2ButtonClick()">Add-Team2</button>  
+    </tbody>
+  </table> 
+
+<table class="table col-sm-4">
+      <thead class="thead-light">
+        <tr>   
+          <th scope="col">Player Name</th> 
+         
+        </tr>
+      </thead>
+      <tbody>
+              <tr *ngFor="let item1 of playerlist1">
+              
+              <td>{{item1}}</td>
+             
+              <td> <button type="button" class="btn btn-danger" (click)="onDeleteButtonClick1()">Delete</button></td>
+              </tr>
+              </tbody> 
+            </table> 
+  </div>
+  
+  
+  <button
+  class="float-right btn btn-primary my-2"
+  (click)="onSubmitButtonClick()">Submit
+  </button>
+
+
+
+ <router-outlet></router-outlet>
+  -->
